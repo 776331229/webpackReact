@@ -24,7 +24,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: "style!css-loader!postcss"
+                loader: "style!css-loader"
             },
             {
                 test: /\.less$/,
@@ -40,9 +40,6 @@ module.exports = {
             },
         ]
     },
-    postcss: [
-        require('autoprefixer') //调用autoprefixer插件
-    ],
     devServer: {
         port:8000,
         contentBase: "./public",//本地服务器所加载的页面所在的目录

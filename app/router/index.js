@@ -1,13 +1,15 @@
 import React from 'react'
 import { Route,IndexRoute} from 'react-router';
 import App from './../views/APP.jsx';
-import Page1 from '../views/page1.jsx';
-import Page2 from '../views/page2.jsx';
+import Home from '../views/home.jsx';
+import UserList from '../views/userList.jsx';
+import Login from '../views/login.jsx';
 
 let routes = <Route path="/" component={App}>
-                <IndexRoute component={Page1}/>
-                <Route path="page1/:id" component={Page1}/>
-                <Route path="page2" component={Page2}/>
+                <IndexRoute component={Login}/>
+                <Route path="home" component={Home}/>
+                <Route path="userList" component={UserList}/>
+                <Route path="login" component={Login}/>
             </Route>;
 
 export default routes

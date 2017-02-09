@@ -1,0 +1,28 @@
+@import "./../../assets/css/index";
+@modal-prefix: x-button;
+
+.@{modal-prefix}-box{
+  position: relative;
+  padding: 6px 15px;
+  border:none;
+  outline: none;
+  cursor: pointer;
+  .x-transition();
+  .x-shadow(0 2px 3px rgba(50,50,50,.2));
+  &:before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0);
+    .x-transition();
+  }
+  &:active{
+    .x-shadow(none);
+    &:before{
+      background-color: rgba(0,0,0,.05);
+    }
+  }
+}

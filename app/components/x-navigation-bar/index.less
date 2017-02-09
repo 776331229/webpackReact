@@ -1,0 +1,98 @@
+@import "./../../assets/css/index";
+
+.x-page-navigation-bar{
+  width:200px;
+  height: 100%;
+  background-color: @nav-bg;
+  .x-nav-box{
+    width:100%;
+    .x-item{
+      display: block;
+      width:100%;
+      padding: 15px 0 15px 40px;
+      color: #7b92b4;
+      .x-transition();
+      &.active , &:hover{
+        background-color: @nav-active-bg;
+        color: #fff;
+        .x-nav-icon{
+          &.-home{
+            background: url("./../../assets/images/base/icons/nav_home_icon_active.png") no-repeat;
+            background-size: 100% 100%;
+          }
+          &.-user{
+            background: url("./../../assets/images/base/icons/nav_user_icon_active.png") no-repeat;
+            background-size: 100% 100%;
+          }
+          &.-exchange{
+            background: url("./../../assets/images/base/icons/nav_exchange_icon_active.png") no-repeat;
+            background-size: 100% 100%;
+          }
+          &.-data{
+            background: url("./../../assets/images/base/icons/nav_data_icon_active.png") no-repeat;
+            background-size: 100% 100%;
+          }
+          &.-power{
+            background: url("./../../assets/images/base/icons/nav_power_icon_active.png") no-repeat;
+            background-size: 100% 100%;
+          }
+          &.-bill{
+            background: url("./../../assets/images/base/icons/nav_bill_icon_active.png") no-repeat;
+            background-size: 100% 100%;
+          }
+          &.-others{
+            background: url("./../../assets/images/base/icons/nav_others_icon_active.png") no-repeat;
+            background-size: 100% 100%;
+          }
+          &.-operation{
+            background: url("./../../assets/images/base/icons/nav_operation_icon_active.png") no-repeat;
+            background-size: 100% 100%;
+          }
+        }
+      }
+      i , span{
+        vertical-align: middle;
+      }
+      /* 导航条各个模块图标 start */
+      .x-nav-icon{
+        display: inline-block;
+        width: 17px;
+        height:17px;
+        margin-right: 20px;
+        &.-home{
+          background: url("./../../assets/images/base/icons/nav_home_icon.png") no-repeat;
+          background-size: 100% 100%;
+        }
+        &.-user{
+          background: url("./../../assets/images/base/icons/nav_user_icon.png") no-repeat;
+          background-size: 100% 100%;
+        }
+        &.-exchange{
+          background: url("./../../assets/images/base/icons/nav_exchange_icon.png") no-repeat;
+          background-size: 100% 100%;
+        }
+        &.-data{
+          background: url("./../../assets/images/base/icons/nav_data_icon.png") no-repeat;
+          background-size: 100% 100%;
+        }
+        &.-power{
+          background: url("./../../assets/images/base/icons/nav_power_icon.png") no-repeat;
+          background-size: 100% 100%;
+        }
+        &.-bill{
+          background: url("./../../assets/images/base/icons/nav_bill_icon.png") no-repeat;
+          background-size: 100% 100%;
+        }
+        &.-others{
+          background: url("./../../assets/images/base/icons/nav_others_icon.png") no-repeat;
+          background-size: 100% 100%;
+        }
+        &.-operation{
+          background: url("./../../assets/images/base/icons/nav_operation_icon.png") no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+      /* 导航条各个模块图标 end */
+    }
+  }
+}

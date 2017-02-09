@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Link  } from 'react-router';
 import history from './../router/history';
-import './../assets/css/base.less'
+import XContent from './../components/x-content/index.jsx';
 import './../assets/css/modules/home.less'
 
 export default React.createClass({
@@ -11,14 +11,9 @@ export default React.createClass({
     },
     render() {
         return (
-            <div className="x-content">
-               <h2>首页</h2>
-                <ul data-flex="main:center">
-                    <li>
-                        <Link to="/userList">用户列表</Link>
-                    </li>
-                </ul>
-            </div>
+            <XContent title="首页">
+                我是首页
+            </XContent>
         );
     },
     routerWillLeave(nextLocation) {

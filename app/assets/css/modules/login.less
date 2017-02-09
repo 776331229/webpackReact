@@ -1,0 +1,39 @@
+/* 登录页面样式 */
+@import "./../index";
+.x-login-bg{
+  position: relative;
+  width:100%;
+  min-width: 1200px;
+  height:100%;
+  background: url("../../images/login/login_bg_img.jpg");
+  background-size: 100% 100%;
+}
+
+.x-login-box{
+  background-color: #fff;
+  .x-border-radius(6px);
+  .x-shadow(0 3px 3px rgba(50,50,50,.2));
+  .x-title{
+    position: relative;
+    padding: 10px 30px;
+    background-color: @skin;
+    color: #fff;
+    &:after{
+      content: '';
+      position: absolute;
+      right:10px;
+      width:18px;
+      height:18px;
+      background: url("./../../images/login/icon/login_page_icon.png") no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .x-content{
+    padding: 30px;
+    .x-login-input{
+      margin-bottom:25px;
+      padding: 5px 15px;
+      .x-border-radius(2px);
+    }
+  }
+}

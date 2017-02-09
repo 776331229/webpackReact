@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Link  } from 'react-router';
 import history from './../router/history';
-import './../assets/css/base.less'
+import XContent from './../components/x-content/index.jsx';
 import './../assets/css/modules/home.less'
 
 export default React.createClass({
@@ -28,26 +28,25 @@ export default React.createClass({
     },
     render() {
         return (
-            <div className="x-content">
-                <h2>用户列表</h2>
-                <table className="x-table">
-                    <thead>
-                        <tr>
-                            <th>序号</th>
-                            <th>用户名</th>
-                            <th>性别</th>
-                            <th>电话号码</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            this.state.userList.map( (d,i) => {
-                                return <tr key={d.username}><td>{i}</td><td>{d.username}</td><td>{d.sex}</td><td>{d.phone}</td></tr>
-                            })
-                        }
-                    </tbody>
-                </table>
-            </div>
+        <XContent title="用户列表">
+            <table className="x-table">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>用户名</th>
+                    <th>性别</th>
+                    <th>电话号码</th>
+                </tr>
+                </thead>
+                <tbody>
+                {
+                    this.state.userList.map( (d,i) => {
+                        return <tr key={d.username}><td>{i}</td><td>{d.username}</td><td>{d.sex}</td><td>{d.phone}</td></tr>
+                    })
+                }
+                </tbody>
+            </table>
+        </XContent>
         );
     },
 })

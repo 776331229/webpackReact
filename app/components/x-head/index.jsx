@@ -9,8 +9,9 @@ export default React.createClass({
                     <Link className="x-logo" to="/index/home">
                         <img src={require('./../../assets/images/base/icons/page_logo_icon.png')} alt="Logo" height="100%"/>
                     </Link>
-                    <div>
+                    <div >
                         <span>XXXX</span>
+                        <i></i>
                     </div>
                 </div>
             </div>

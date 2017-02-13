@@ -7,6 +7,7 @@
   .x-nav-box{
     width:100%;
     .x-item{
+      position: relative;
       display: block;
       width:100%;
       padding: 15px 0 15px 40px;
@@ -48,6 +49,22 @@
             background: url("./../../assets/images/base/icons/nav_operation_icon_active.png") no-repeat;
             background-size: 100% 100%;
           }
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 16px;
+          display: inline-block;
+          height: 6px;
+          width: 6px;
+          margin-top: auto;
+          margin-bottom: auto;
+          border-width: 2px 2px 0 0;
+          border-color: #fff;
+          border-style: solid;
+          .x-transform(rotate(45deg));
         }
       }
       i , span{

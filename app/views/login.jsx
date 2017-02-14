@@ -2,8 +2,11 @@ import React, {Component} from 'react'
 import history from './../router/history';
 import XInput from './../components/x-input/index.jsx'
 import XButton from './../components/x-button/index.jsx'
+import { connect } from 'react-redux'
+import { login } from '../redux/actions/loginAction.js';
 import './../assets/css/modules/login.less'
-export default React.createClass({
+
+const Login  = React.createClass({
     componentDidMount() {
         window.addEventListener('keydown', this.handleKeyDown)
     },
@@ -16,10 +19,11 @@ export default React.createClass({
     login() {
         let username = this.state.username,
             password = this.state.password;
-        if(username != 'admin' && password != '123456'){
-            alert("请输入正确的用户名或密码");
+        if(username == 'admin' && password == '123456'){
+            this.props.dispatch(login({username,password,true}));
+            // history.push("/index/home");
         } else {
-            history.push("/index/home");
+            alert("请输入正确的用户名或密码");
         }
 
     },
@@ -53,7 +57,7 @@ export default React.createClass({
             <div className="x-login-bg" data-flex="main:center cross:center">
                 <div className="x-login-box">
                     <div className="x-title">
-                        <span>用户登录</span>
+                        <span>用户登录{this.props.state}</span>
                     </div>
                     <div className="x-content">
                         <XInput classValue="x-login-input" bgColor="#eee" value={this.state.username} placeholder="请输入用户名" onInputChange={this.changeUsername}>
@@ -70,3 +74,13 @@ export default React.createClass({
         );
     }
 })
+
+//绑定状态到props上面
+function mapStateToProps(state) {
+    console.log(state);
+    return {
+        state: state.login.username
+    }
+}
+
+export default connect(mapStateToProps)(Login)

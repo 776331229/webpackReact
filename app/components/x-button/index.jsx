@@ -15,7 +15,7 @@ export default React.createClass({
             bgColor : '#49b5f6',
             textColor : '#fff',
             bRadian : '3px',
-            width : '100%'
+            width : 'auto'
         };
     },
     handleClick: function() {

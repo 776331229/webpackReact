@@ -9,5 +9,25 @@
   .x-logo{
     height: 35px;
   }
+  .x-user-info{
+    position: relative;
+    padding-left: 30px;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    &:before{
+      content: '';
+      position: absolute;
+      top:0;
+      left:0;
+      bottom:0;
+      margin: auto 0;
+      display: block;
+      width: 20px;
+      height:20px;
+      background: url("./../../assets/images/login/icon/head_user_icon.png") no-repeat;
+      background-size: 100% 100%;
+    }
+  }
   .x-shadow(0 1px 3px rgba(50, 50, 50, 0.4));
 }

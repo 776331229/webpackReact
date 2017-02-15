@@ -11,5 +11,5 @@ const createStoreWithMiddleware = applyMiddleware(
 
 
 export default function configureStore(initialState) {
-    return createStoreWithMiddleware(rootReducer, initialState )
+    return createStoreWithMiddleware(rootReducer, initialState ,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 }

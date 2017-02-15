@@ -1,6 +1,54 @@
-body{
+@import "index";
+
+body {
   background-color: #f1f1f1;
 }
-.x-base-page-size{
-  width:1200px;
+
+.x-base-page-size {
+  width: 1200px;
 }
+
+/* 列表搜索框 start */
+.x-page-search-box {
+  margin-bottom: 20px;
+}
+
+.x-search-input {
+  margin-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #c6c6c6;
+  .x-border-radius();
+}
+
+/* 列表搜索框 end */
+
+/* 项目中的表格统一样式 start */
+.x-table {
+  width: 100%;
+  text-align: center;
+  thead th , tbody td {
+    padding: 15px 0;
+  }
+  thead tr {
+    background-color: @table-bg;
+    th{
+      font-size: 14px;
+    }
+  }
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background-color: #fff;
+      }
+      &:nth-child(even) {
+        background-color: @table-bg;
+      }
+      td{
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+/* 项目中的表格统一样式 end */

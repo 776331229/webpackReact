@@ -66,7 +66,7 @@ const Login  = React.createClass({
                         <XInput classValue="x-login-input" bgColor="#eee" type="password" value={this.state.password} placeholder="请输入密码" onInputChange={this.changePassword}>
                             <i className="x-icon login-pass-icon"></i>
                         </XInput>
-                        <XButton value="登录" onClick={this.login}></XButton>
+                        <XButton value="登录" width="100%" onClick={this.login}></XButton>
                     </div>
                 </div>
 

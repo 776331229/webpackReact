@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router'
+import { connect } from 'react-redux'
 import './index.less'
-export default React.createClass({
+const XHead = React.createClass({
     render: function () {
         return (
             <div className="x-page-head-box" data-flex="main:center">
@@ -10,7 +11,7 @@ export default React.createClass({
                         <img src={require('./../../assets/images/base/icons/page_logo_icon.png')} alt="Logo" height="100%"/>
                     </Link>
                     <div >
-                        <span>XXXX</span>
+                        <span>{this.props.username}</span>
                         <i></i>
                     </div>
                 </div>
@@ -18,3 +19,13 @@ export default React.createClass({
         );
     }
 });
+
+
+//绑定状态到props上面
+function mapStateToProps(state) {
+    return {
+        username: state.login.username
+    }
+}
+
+export default connect(mapStateToProps)(XHead)

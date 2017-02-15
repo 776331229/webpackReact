@@ -21,7 +21,7 @@ const Login  = React.createClass({
             password = this.state.password;
         if(username == 'admin' && password == '123456'){
             this.props.dispatch(login({username,password,true}));
-            // history.push("/index/home");
+            history.push("/index/home");
         } else {
             alert("请输入正确的用户名或密码");
         }
@@ -57,7 +57,7 @@ const Login  = React.createClass({
             <div className="x-login-bg" data-flex="main:center cross:center">
                 <div className="x-login-box">
                     <div className="x-title">
-                        <span>用户登录{this.props.state}</span>
+                        <span>用户登录</span>
                     </div>
                     <div className="x-content">
                         <XInput classValue="x-login-input" bgColor="#eee" value={this.state.username} placeholder="请输入用户名" onInputChange={this.changeUsername}>

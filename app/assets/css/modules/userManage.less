@@ -12,20 +12,24 @@
   }
 }
 
-.example-enter {
+:global(.transitionWrapper-enter) {
   opacity: 0.01;
-  transition: opacity .5s ease-in;
+  transition: opacity 30000ms ease-in;
 }
 
-.example-enter.example-enter-active {
+:global(.transitionWrapper-enter.transitionWrapper-enter-active) {
   opacity: 1;
 }
 
-.example-leave {
+:global(.transitionWrapper-leave) {
   opacity: 1;
-  transition: opacity .5s ease-in;
+  transition: opacity 30000ms ease-in;
 }
 
-.example-leave.example-leave-active {
-  opacity: 0.01;
+:global(.transitionWrapper-leave.transitionWrapper-leave-active) {
+  opacity: 0;
+}
+
+.transitionWrapper {
+  position: relative;
 }

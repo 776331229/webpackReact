@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactCSSTransitionGroup   from 'react-addons-css-transition-group'
 import XHead from './../components/x-head/index.jsx'
 import XNavigationBar from './../components/x-navigation-bar/index.jsx'
 import XContent from './../components/x-content/index.jsx'

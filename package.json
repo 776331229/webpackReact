@@ -44,7 +44,10 @@
   },
   "dependencies": {
     "html-withimg-loader": "^0.1.16",
+    "rc-queue-anim": "^0.13.0",
+    "rc-tween-one": "^1.0.0",
     "react": "^15.4.2",
+    "react-addons-css-transition-group": "15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "^3.0.2"
   }
